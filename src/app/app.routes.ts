@@ -13,8 +13,8 @@ export const routes: Routes = [
   {
     path: "detail-compte/:id", component: AccountResumeComponent, title: "détail du compte", children: [
       { path: "", redirectTo: "depot", pathMatch: "full" },
-      { path: "depot", component: RetirerComponent },
-      { path: "retrait", component: DepotComponent }
+      { path: "depot", component: DepotComponent },
+      { path: "retrait", component: RetirerComponent }
     ]
   },
   {

@@ -26,7 +26,9 @@
         <td>{{ account.solde}}</td>
         <td>{{ account.accountType }}</td>
         <td>{{ account.lastTransactionDate}}</td>
-        <td><button class="btn btn-bordered" (click)="goToDetail(account.id)">Voir les détails</button></td>
+        <td>
+          <button class="btn btn-bordered" (click)="goToDetail(account.id)">Voir les détails</button>
+        </td>
       </tr>
       } @empty {
       <p>Données non disponible, veuillez réessayer plus tard</p>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AccountService } from '../../services/account.service';
+import { ActivatedRoute, Route } from '@angular/router';
+import { BankAccount } from '../../models/bank-account.model';
 
 @Component({
   selector: 'app-depot',
@@ -8,4 +11,19 @@ import { Component } from '@angular/core';
 })
 export class DepotComponent {
 
+  id?: number
+
+  account?: BankAccount
+
+  constructor(private service: AccountService, private route: ActivatedRoute) {
+
+    this.id = this.route.parent?.snapshot.params['id']
+
+    if (this.id) {
+      console.log(this.id)
+      this.service.getAccounById(this.id).subscribe({
+        next: (data) => this.account = data
+      })
+    }
+  }
 }

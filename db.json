@@ -13,14 +13,14 @@
     },
     {
       "id": "2",
-      "firstName": "Marie",
-      "lastName": "Martin",
-      "email": "marie.martin@example.com",
+      "firstName": "Jean",
+      "lastName": "Dupont",
+      "email": "jean.dupont@example.com",
       "role": "USER",
-      "accountNumber": "FR7630004000031234567890143",
-      "solde": 5430.2,
-      "lastTransactionDate": "2023-05-02T09:18:42.000Z",
-      "accountType": "EPARGNE"
+      "accountNumber": "FR7630001007941234567890185",
+      "solde": 1250.75,
+      "lastTransactionDate": "2023-04-15T14:32:15.000Z",
+      "accountType": "COURANT"
     },
     {
       "id": "3",
