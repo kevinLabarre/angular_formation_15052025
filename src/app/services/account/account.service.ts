@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BankAccount } from '../models/bank-account.model';
+import { BankAccount } from '../../models/bank-account.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,4 +22,9 @@ export class AccountService {
   updateAccount(id: number, account: BankAccount): Observable<BankAccount> {
     return this.http.put<BankAccount>(`http://localhost:3000/bankAccounts/${id}`, account)
   }
+
+  addAccount(account: BankAccount): Observable<BankAccount> {
+    return this.http.put<BankAccount>(`http://localhost:3000/bankAccounts/`, account)
+  }
+
 }

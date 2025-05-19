@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { AccountService } from '../../services/account.service';
+import { AccountService } from '../../services/account/account.service';
 import { BankAccount } from '../../models/bank-account.model';
 
 @Component({

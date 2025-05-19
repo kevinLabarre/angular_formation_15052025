@@ -1,1 +1,7 @@
-<p>retirer works!</p>
+<section>
+  <h1>Mon solde</h1>
+  @if(account){
+  <p>{{account.solde}}</p>
+  }
+  <app-solde-form [account]="account" operation="withdraw" />
+</section>

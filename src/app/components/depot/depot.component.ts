@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { AccountService } from '../../services/account.service';
+import { AccountService } from '../../services/account/account.service';
 import { ActivatedRoute, Route } from '@angular/router';
 import { BankAccount } from '../../models/bank-account.model';
+import { SoldeFormComponent } from "../solde-form/solde-form.component";
 
 @Component({
   selector: 'app-depot',
-  imports: [],
+  imports: [SoldeFormComponent],
   templateUrl: './depot.component.html',
   styleUrl: './depot.component.css'
 })

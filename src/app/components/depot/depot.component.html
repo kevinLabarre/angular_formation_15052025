@@ -4,10 +4,10 @@
   <p>{{account.solde}}</p>
   }
 
-  <!-- Faire passer le solde OU le compte en param
+  <!-- Faire passer le compte en param
   <app-form-depot>
   -->
 
-  <app-solde-form />
+  <app-solde-form [account]="account" operation="deposit" />
 
 </section>

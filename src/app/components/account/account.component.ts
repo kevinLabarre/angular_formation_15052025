@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { AccountService } from '../../services/account.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AccountService } from '../../services/account/account.service';
 import { BankAccount } from '../../models/bank-account.model';
 import { Router } from '@angular/router';
 
@@ -9,11 +9,14 @@ import { Router } from '@angular/router';
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
-export class AccountComponent {
+export class AccountComponent implements OnInit {
 
   accounts: BankAccount[] = [];
 
   constructor(private accountService: AccountService, private router: Router) {
+  }
+
+  ngOnInit(): void {
     this.accountService.getAccounts().subscribe({
       next: (data) => this.accounts = data
     });
